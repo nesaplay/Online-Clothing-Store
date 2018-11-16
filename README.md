@@ -1,6 +1,6 @@
 # Online Clothing Store
 
-This is a full stack online clothing store complete with react credit checkout. Users can search, sell, add to card and checout their favourite items.
+This is a full stack online clothing store complete with real credit checkout. Users can search, sell, add to card and checout their favourite items.
 
 ### Client Side 
 
