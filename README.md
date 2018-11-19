@@ -13,11 +13,9 @@ This is a full stack online clothing store complete with real credit checkout. U
 ### Server Side 
 
     -   NodeJS
-    -   MongoDB
     -   GraphQL Yoga
     -   Prisma
     -   Passport JWT Auth
-    -   Bcrypt
 
 ## Installing
 
