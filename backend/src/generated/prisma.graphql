@@ -292,7 +292,6 @@ type Item implements Node {
   price: Int!
   createdAt: DateTime!
   updatedAt: DateTime!
-  user(where: UserWhereInput): User!
 }
 
 """A connection to a list of items."""
@@ -1588,10 +1587,8 @@ type User implements Node {
   name: String!
   orders(where: OrderWhereInput, orderBy: OrderOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Order!]
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   cart(where: CartItemWhereInput, orderBy: CartItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [CartItem!]
-  createdAt: DateTime!
-  updatedAt: DateTime!
   permissions: [Permission!]
 }
 
@@ -1610,7 +1607,7 @@ input UserCreateInput {
   password: String!
   name: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserCreatepermissionsInput
   orders: OrderCreateManyWithoutUserInput
   cart: CartItemCreateManyWithoutUserInput
@@ -1640,7 +1637,7 @@ input UserCreateWithoutCartInput {
   password: String!
   name: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserCreatepermissionsInput
   orders: OrderCreateManyWithoutUserInput
 }
@@ -1650,7 +1647,7 @@ input UserCreateWithoutOrdersInput {
   password: String!
   name: String!
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserCreatepermissionsInput
   cart: CartItemCreateManyWithoutUserInput
 }
@@ -1689,9 +1686,7 @@ type UserPreviousValues {
   password: String!
   name: String!
   resetToken: String
-  resetTokenExpiry: String
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  resetTokenExpiry: Float
   permissions: [Permission!]
 }
 
@@ -1739,7 +1734,7 @@ input UserUpdateDataInput {
   password: String
   name: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   orders: OrderUpdateManyWithoutUserInput
   cart: CartItemUpdateManyWithoutUserInput
@@ -1750,7 +1745,7 @@ input UserUpdateInput {
   password: String
   name: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   orders: OrderUpdateManyWithoutUserInput
   cart: CartItemUpdateManyWithoutUserInput
@@ -1789,7 +1784,7 @@ input UserUpdateWithoutCartDataInput {
   password: String
   name: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   orders: OrderUpdateManyWithoutUserInput
 }
@@ -1799,7 +1794,7 @@ input UserUpdateWithoutOrdersDataInput {
   password: String
   name: String
   resetToken: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
   permissions: UserUpdatepermissionsInput
   cart: CartItemUpdateManyWithoutUserInput
 }
@@ -2028,46 +2023,46 @@ input UserWhereInput {
 
   """All values not ending with the given string."""
   resetToken_not_ends_with: String
-  resetTokenExpiry: String
+  resetTokenExpiry: Float
 
   """All values that are not equal to given value."""
-  resetTokenExpiry_not: String
+  resetTokenExpiry_not: Float
 
   """All values that are contained in given list."""
-  resetTokenExpiry_in: [String!]
+  resetTokenExpiry_in: [Float!]
 
   """All values that are not contained in given list."""
-  resetTokenExpiry_not_in: [String!]
+  resetTokenExpiry_not_in: [Float!]
 
   """All values less than the given value."""
-  resetTokenExpiry_lt: String
+  resetTokenExpiry_lt: Float
 
   """All values less than or equal the given value."""
-  resetTokenExpiry_lte: String
+  resetTokenExpiry_lte: Float
 
   """All values greater than the given value."""
-  resetTokenExpiry_gt: String
+  resetTokenExpiry_gt: Float
 
   """All values greater than or equal the given value."""
-  resetTokenExpiry_gte: String
+  resetTokenExpiry_gte: Float
 
   """All values containing the given string."""
-  resetTokenExpiry_contains: String
+  resetTokenExpiry_contains: Float
 
   """All values not containing the given string."""
-  resetTokenExpiry_not_contains: String
+  resetTokenExpiry_not_contains: Float
 
   """All values starting with the given string."""
-  resetTokenExpiry_starts_with: String
+  resetTokenExpiry_starts_with: Float
 
   """All values not starting with the given string."""
-  resetTokenExpiry_not_starts_with: String
+  resetTokenExpiry_not_starts_with: Float
 
   """All values ending with the given string."""
-  resetTokenExpiry_ends_with: String
+  resetTokenExpiry_ends_with: Float
 
   """All values not ending with the given string."""
-  resetTokenExpiry_not_ends_with: String
+  resetTokenExpiry_not_ends_with: Float
   createdAt: DateTime
 
   """All values that are not equal to given value."""
