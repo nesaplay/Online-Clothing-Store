@@ -21,4 +21,4 @@ const Signout = () => {
   )
 }
 
-export default Signout
+export default Signout;
