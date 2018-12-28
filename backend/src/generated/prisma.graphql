@@ -31,8 +31,6 @@ type CartItem implements Node {
   quantity: Int!
   item(where: ItemWhereInput): Item
   user(where: UserWhereInput): User!
-  createdAt: DateTime!
-  updatedAt: DateTime!
 }
 
 """A connection to a list of items."""
