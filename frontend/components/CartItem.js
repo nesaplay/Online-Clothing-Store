@@ -47,6 +47,6 @@ const CartItem = ({ cartItem }) => {
 };
 
 CartItem.propTypes = {
-  cartitem: PropTypes.object.isRequired,
+  cartitem: PropTypes.object,
 };
 export default CartItem;
