@@ -57,7 +57,7 @@ class CreateItem extends Component {
 
               Router.push({
                 pathname: '/item',
-                query: { id: renderToStringWithData.createItem.id },
+                query: { id: res.data.createItem.id },
               })
             }}>
             <Error error={error} />

@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import CreateItem from '../components/CreateItem';
 import PleaseSignIn from '../components/PleaseSignin';
+import Permissions from '../components/Permissions';
 
-const Sell = props => (
+const PermissionsPage = props => (
   <div>
     <PleaseSignIn>
-      <CreateItem />
+      <Permissions />
     </PleaseSignIn>
   </div>
 )
 
-export default Sell
+export default PermissionsPage;
